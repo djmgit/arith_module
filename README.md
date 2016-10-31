@@ -2,53 +2,61 @@
 
 ## About the module
 
-  Arith module contains 6 arithmetic methods that can be applied on simple keys and 1 arithmetic method 
-  which can be applied on lists.
+  Arith module contains 6 arithmetic methods that can be applied on simple keys with integer values 
+  and 1 arithmetic method which can be applied on lists integer values and two utility method for lists 
+  with type of value.
   
 ## Arith methods
 
 ### ARITH.SUM
-
+```
 ARITH.SUM key1 key2 key3
-
+```
 Add the values of key1 and key2 and stores the result in key3 and displays the result.
+> Time Complexity O(1)
 
 ### ARITH.SUB
-
+```
 ARITH.SUB key1 key2 key3
-
+```
 Subtracts the value of key2 from key1 and stores the result in key3 and displays the result.
 
 ### ARITH.PROD
-
+```
 ARITH.PROD key1 key2 key3
-
+```
 Multiply the values of key1 and key2 and stores the result in key3 and displays the result.
+> Time Complexity O(1)
 
 ### ARITH.DIV
-
+```
 ARITH.DIV key1 key2 key3
-
+```
 Divides the value of key1 by key2 and stores the quotient in key3 and displays the quotient.
 The value of key3 should be non-zero.
+> Time Complexity O(1)
 
 ### ARITH.MOD
-
+```
 ARITH.MOD key1 key2 key3
-
+```
 Divides the value of key1 by key2 and stores the remainder in key3 and displays the remainder.
+> Time Complexity O(1)
 
 ### ARITH.POW
-
+```
 ARITH.POW key1 key2 key3
-
+```
 Raises the value of key1 to the power of key2 and stores the result in key3 and displays the result.
+> Time Complexity O(1)
 
 ### ARITH.LINCRBY
-
+```
 ARITH.LINCRBY listkey increment_value start_index end_index
-
+```
 Increases the values present in the range from start_index to end_index (start_index and end_index inclusive) by increment_value
+and returns the length of the range on success
+> Time Complexity O(N)
 
 # Quick Start Guide
 
