@@ -13,6 +13,7 @@
 ARITH.SUM key1 key2 key3
 ```
 Applicable on keys with integer values
+
 Add the values of key1 and key2 and stores the result in key3 and displays the result.
 > Time Complexity O(1)
 
@@ -21,6 +22,7 @@ Add the values of key1 and key2 and stores the result in key3 and displays the r
 ARITH.SUB key1 key2 key3
 ```
 Applicable on keys with integer values
+
 Subtracts the value of key2 from key1 and stores the result in key3 and displays the result.
 > Time Complexity O(1)
 
@@ -29,6 +31,7 @@ Subtracts the value of key2 from key1 and stores the result in key3 and displays
 ARITH.PROD key1 key2 key3
 ```
 Applicable on keys with integer values
+
 Multiply the values of key1 and key2 and stores the result in key3 and displays the result.
 > Time Complexity O(1)
 
@@ -37,6 +40,7 @@ Multiply the values of key1 and key2 and stores the result in key3 and displays 
 ARITH.DIV key1 key2 key3
 ```
 Applicable on keys with integer values
+
 Divides the value of key1 by key2 and stores the quotient in key3 and displays the quotient.
 The value of key3 should be non-zero.
 > Time Complexity O(1)
@@ -46,6 +50,7 @@ The value of key3 should be non-zero.
 ARITH.MOD key1 key2 key3
 ```
 Applicable on keys with integer values
+
 Divides the value of key1 by key2 and stores the remainder in key3 and displays the remainder.
 > Time Complexity O(1)
 
@@ -54,6 +59,7 @@ Divides the value of key1 by key2 and stores the remainder in key3 and displays 
 ARITH.POW key1 key2 key3
 ```
 Applicable on keys with integer values
+
 Raises the value of key1 to the power of key2 and stores the result in key3 and displays the result.
 > Time Complexity O(1)
 
@@ -62,6 +68,7 @@ Raises the value of key1 to the power of key2 and stores the result in key3 and 
 ARITH.LINCRBY listkey increment_value start_index end_index
 ```
 Applicable on lists with integer values
+
 Increases the values present in the range from start_index to end_index (start_index and end_index inclusive) by increment_value
 and returns the length of the range on success
 > Time Complexity O(N)
@@ -71,6 +78,7 @@ and returns the length of the range on success
 ARITH.LRSUM listkey start_index end_index sum_key
 ```
 Applicable on lists with integer values
+
 Adds all the values prsent in the range from start_index to end_index (start_index and end_index inclusive) and
 returns the sum. The sum_key argument is optional. If present then the sum is stored in sum_key.
 > Time Complexity O(N)
@@ -80,6 +88,7 @@ returns the sum. The sum_key argument is optional. If present then the sum is st
 ARITH.LRSUM listkey start_index end_index result_key
 ```
 Applicable on lists with integer values
+
 Finds the largest value present in the range from start_index to end_index (start_index and end_index inclusive) and
 returns the max value. The result_key argument is optional. If present then the max value is stored in result_key. 
 > Time Complexity O(N)
@@ -89,6 +98,7 @@ returns the max value. The result_key argument is optional. If present then the 
 ARITH.LRMIN listkey start_index end_index result_key
 ```
 Applicable on lists with integer values
+
 Finds the lowest value present in the range from start_index to end_index (start_index and end_index inclusive) and
 returns the min value. The result_key argument is optional. If present then the min value is stored in result_key. 
 > Time Complexity O(N)
@@ -98,6 +108,7 @@ returns the min value. The result_key argument is optional. If present then the 
 ARITH.LLSUM listkey1 listkey2 listkey3
 ```
 Applicable on lists with integer values
+
 Adds the corresponding values of lists speified by listkey1 and listkey2 and stores the values in listkey3. The length 
 of lists specified by listkey1 and listkey2 must be equal.
 > Time Complexity O(N)
