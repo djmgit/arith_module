@@ -2,9 +2,9 @@
 
 ## About the module
 
-  Arith module contains 6 arithmetic methods that can be applied on simple keys with integer values 
-  and 1 arithmetic method which can be applied on lists integer values and two utility method for lists 
-  with type of value.
+  Arith module contains 6 methods based on basic arithmetics that can be applied on simple keys with integer values 
+  and 7 utility methods which can be applied on lists with integer values and two utility methods for lists and keys
+  with any type of values.All the methods and their use are described below.
   
 ## Arith methods
 
