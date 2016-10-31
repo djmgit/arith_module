@@ -117,6 +117,8 @@ returns the list length on success. The length of lists specified by listkey1 an
 ```
 ARITH.LLKPUSH listkey key1 key2 key3 ...
 ```
+Applicable on keys and lists with any type of values.
+
 This method inserts the values of keys specified by key1, key2 and so on to list specified by listkey from left
 and returns the number of values added on success.
 > Time Complexity O(N)
@@ -125,6 +127,8 @@ and returns the number of values added on success.
 ```
 ARITH.LRKPUSH listkey key1 key2 key3 ...
 ```
+Applicable on keys and lists with any type of values.
+
 This method inserts the values of keys specified by key1, key2 and so on to list specified by listkey from right
 and returns the number of values added on success.
 > Time Complexity O(N)
