@@ -109,8 +109,24 @@ ARITH.LLSUM listkey1 listkey2 listkey3
 ```
 Applicable on lists with integer values
 
-Adds the corresponding values of lists speified by listkey1 and listkey2 and stores the values in listkey3. The length 
-of lists specified by listkey1 and listkey2 must be equal.
+Adds the corresponding values of lists speified by listkey1 and listkey2 and stores the values in listkey3 and
+returns the list length on success. The length of lists specified by listkey1 and listkey2 must be equal
+> Time Complexity O(N)
+
+### ARITH.LLKPUSH
+```
+ARITH.LLKPUSH listkey key1 key2 key3 ...
+```
+This method inserts the values of keys specified by key1, key2 and so on to list specified by listkey from left
+and returns the number of values added on success.
+> Time Complexity O(N)
+
+### ARITH.LRKPUSH
+```
+ARITH.LRKPUSH listkey key1 key2 key3 ...
+```
+This method inserts the values of keys specified by key1, key2 and so on to list specified by listkey from right
+and returns the number of values added on success.
 > Time Complexity O(N)
 
 # Quick Start Guide
@@ -211,6 +227,23 @@ OK
 3) "4"
 4) "15"
 5) "13"
-
+127.0.0.1:6379> SET key1 2
+OK
+127.0.0.1:6379> SET key2 4
+OK
+127.0.0.1:6379> SET key3 10
+OK
+127.0.0.1:6379> ARITH.LLKPUSH list4 key1 key2 key3
+(integer) 3
+127.0.0.1:6379> LRANGE list4 0 -1
+1) "10"
+2) "4"
+3) "2"
+127.0.0.1:6379> ARITH.LRKPUSH list5 key1 key2 key3
+(integer) 3
+127.0.0.1:6379> LRANGE list5 0 -1
+1) "2"
+2) "4"
+3) "10"
 
 ```
