@@ -465,7 +465,7 @@ int Lrmin(RedisModuleCtx *ctx, RedisModuleString **argv, int argc) {
 int Llsum(RedisModuleCtx *ctx, RedisModuleString **argv, int argc) {
 
  // we must have at least 4 args
-  if (argc < 4) {
+  if (argc < 3) {
     return RedisModule_WrongArity(ctx);
   }
 
@@ -497,9 +497,17 @@ int Llsum(RedisModuleCtx *ctx, RedisModuleString **argv, int argc) {
     RMUTIL_ASSERT_NOERROR(rep);
     long long element2 = GetArgVal(ctx, rep);
 	long long elementsum = element1 + element2;
-    rep =
-      RedisModule_Call(ctx, "RPUSH", "sl", argv[3], elementsum);
-    RMUTIL_ASSERT_NOERROR(rep);
+	RedisModuleString *finalValue = RedisModule_CreateStringFromLongLong(ctx, elementsum);
+	if (argc == 4) {
+	    rep =
+	      RedisModule_Call(ctx, "RPUSH", "sl", argv[3], elementsum);
+	    RMUTIL_ASSERT_NOERROR(rep);
+    }
+    else {
+    	rep =
+	      RedisModule_Call(ctx, "LSET","sss", argv[1], index, finalValue);
+	    RMUTIL_ASSERT_NOERROR(rep);
+    }
   }
 
   RedisModule_ReplyWithLongLong(ctx, listLength1);

@@ -109,8 +109,10 @@ ARITH.LLSUM listkey1 listkey2 listkey3
 ```
 Applicable on lists with integer values
 
-Adds the corresponding values of lists speified by listkey1 and listkey2 and stores the values in listkey3 and
-returns the list length on success. The length of lists specified by listkey1 and listkey2 must be equal
+Adds the corresponding values of lists speified by listkey1 and listkey2. The listkey3 argument is optional. If present,
+the sum values are stored in the list specified by listkey3 otherswise the sum values are stored in the first specified
+list (existing values are overwritten). The listlength is returned.The length of lists specified by listkey1 and listkey2 
+must be equal
 > Time Complexity O(N)
 
 ### ARITH.LLKPUSH
